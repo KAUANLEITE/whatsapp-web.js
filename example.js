@@ -32,20 +32,105 @@ client.on('ready', () => {
 client.on('message', async msg => {
     console.log('MESSAGE RECEIVED', msg);
 
-    if (msg.body === '!ping reply') {
-        // Send a new message as a reply to the current one
-        msg.reply('pong');
+//COLOCAR MODO DE ENTRADA DE TEXTO PARA RESPOSTAS
+               //MODULO DE ABERTURA MSG
 
-    } else if (msg.body === '!ping') {
-        // Send a new message to the same chat
-        client.sendMessage(msg.from, 'pong');
+        if (msg.body === 'oi') {
+            msg.reply("Olá seja bem vindo(a) ao *atendimento do Site Domínio Auto Peças* por favor Digite:⤵️ \n\n1️⃣- *Para orçamentos* \n\n2️⃣- *falar sobre compra já feita* \n\n3️⃣- *Nossos Endereços* \n\n4️⃣- *Falar nos demais setores* "); 
+				
+		} else if (msg.body === 'Oi' ) {
+                
+            client.sendMessage(msg.from, '😎✌🏽🚙 Olá seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
+        
+        } else if (msg.body === 'Olá bom dia' ) {
+                
+            client.sendMessage(msg.from, '😎✌🏽🚙 Olá bom dia, seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
 
-    } else if (msg.body.startsWith('!sendto ')) {
+
+
+            } else if (msg.body === 'OI') {
+                client.sendMessage(msg.from, '😎✌🏽🚙 Olá seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
+                            
+        } else if (msg.body === 'ola') {
+             client.sendMessage(msg.from, '😎✌🏽🚙 Olá seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
+		
+		} else if (msg.body === 'olá') {
+             client.sendMessage(msg.from, '😎✌🏽🚙 Olá seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
+		
+		} else if (msg.body === 'Olá') {
+            client.sendMessage(msg.from, '😎✌🏽🚙 Olá seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
+		
+		} else if (msg.body === 'Bom dia') {
+            client.sendMessage(msg.from, '😎✌🏽🚙 Olá bom dia, Olá seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
+		
+		} else if (msg.body === 'Boa tarde') {
+            client.sendMessage(msg.from, '😎✌🏽🚙 Olá boa tarde, Olá seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
+		
+        } else if (msg.body === 'boa tarde') {
+            client.sendMessage(msg.from, '😎✌🏽🚙 Olá boa tarde, Olá seja bem vindo(a) ao atendimento do Site Domínio Auto Peças Como podemos ajudar? \nDigite: \n1️⃣- Se precisa de um orçamento \n----------------------------------- \n2️⃣- Para falar sobre uma compra ja feita \n----------------------------------- \n3️⃣- Nossos Endereços \n----------------------------------- \n4️⃣- Falar nos demais setores ');
+		
+			
+		} else if (msg.body === '1') {
+              client.sendMessage(msg.from, 'Só mais uma pergunta: \nComo pretende fazer a compra ? \n ➡️Digite "*SITE*" \nPara comprar no site🌏. \n-----------------------------------  \n ou ➡️Digite "*LOJA*" \nPara comprar em nossas lojas🏪');
+		
+		} else if (msg.body === '2') {
+             client.sendMessage(msg.from, 'Para que possamos encontrar seu pedido/compra por gentileza, \nInforme o nº do seu *CPF* ou o nº do seu pedido');}
+        
+          else if(msg.body =='3') {
+            client.sendMessage(msg.from, 'Seja sempre bem vindos(as) em nossas loja:\n\n📍Patriarca: Rua Pinhal, 283 - Cidade Patriarca, São Paulo - SP, 03564-040 \n---------------------------------------------------------------------------------  \n\n📍Rio das Pedras: Av Rio das Pedras, 1553 - Jardim Aricanduva, São Paulo - SP, 03452-000 \n---------------------------------------------------------------------------------\n\n📍Sapopemba : Av. Sapopemba, 2449 - Vila Diva (Zona Leste), São Paulo - SP, 03345-001 \n---------------------------------------------------------------------------------\n\n📍Cursino : Av. do Cursino, 2283 - Vila Gumercindo, São Paulo - SP, 04133-000' ) 
+        } 
+               
+                 // modo botão lista  
+     
+        //MODO SITE
+
+                else if (msg.body === 'SITE') {
+                client.sendMessage(msg.from, 'Legal, em nosso site você compra com segurança e praticidade🚀🔒 \n\nEstamos com desconto de 10% no PIX, BOLETO OU EM 1X No cartão. \n\nSe você não encontrou em nosso site o produto que desejava, não tem problema, *basta escrever abaixo qual produto precisa.* \n\n_Digite nesta sequência:_⤵️ \n👉  Peça | veículo | Ano | modelo | \n\nVeja um exemplo:⤵️ \nPara-choque Dianteiro Corsa 2010 Classic Para pintura');
+        }
+             
+            else if (msg.body == 'Site') {
+                client.sendMessage(msg.from,'Legal, em nosso site você compra com segurança e praticidade🚀🔒 \n\nEstamos com desconto de 10% no PIX, BOLETO OU EM 1X No cartão. \n\nSe você não encontrou em nosso site o produto que desejava, não tem problema, *basta escrever abaixo qual produto precisa.* \n\n_Digite nesta sequência:_⤵️ \n👉  Peça | veículo | Ano | modelo | \n\nVeja um exemplo:⤵️ \nPara-choque Dianteiro Corsa 2010 Classic Para pintura');
+        }    
+            
+            else if (msg.body == 'site'){
+                client.sendMessage(msg.from,'Legal, em nosso site você compra com segurança e praticidade🚀🔒 \n\nEstamos com desconto de 10% no PIX, BOLETO OU EM 1X No cartão. \n\nSe você não encontrou em nosso site o produto que desejava, não tem problema, *basta escrever abaixo qual produto precisa.* \n\n_Digite nesta sequência:_⤵️ \n👉  Peça | veículo | Ano | modelo | \n\nVeja um exemplo:⤵️ \nPara-choque Dianteiro Corsa 2010 Classic Para pintura');
+                
+                //MODO LOJA 
+
+        }
+             else if (msg.body == 'Loja'){
+                client.sendMessage(msg.from,'Seja sempre bem vindo(a) em nossas lojas. \n\n🔁 Estarei direcionando este atendimento para um de nossos vendedores.. \n\n _Você pode digitar qual peça precisa e também colocar em qual loja deseja efetuar a compra_');
+           
+        }      
+            else if (msg.body == 'loja'){
+                client.sendMessage(msg.from,'Seja sempre bem vindo(a) em nossas lojas. \n\n🔁 Estarei direcionando este atendimento para um de nossos vendedores.. \n\n _Você pode digitar qual peça precisa e também colocar em qual loja deseja efetuar a compra_');  }   
+             
+             
+                // MODO ENDEREÇO 
+            
+            else if (msg.body =='4'){
+                
+                client.sendMessage(msg.from,'Digite por gentileza em qual setor deseja falar.')}
+             
+             
+             else if (msg.body =='#Endereço'){
+                client.sendMessage(msg.from,'')}
+                
+                else if (msg.body =='endereço'){
+                    client.sendMessage(msg.from,'')}
+
+
+         else if (msg.body === '!ping') {
+         // Send a new message to the same chat
+        client.sendMessage(msg.from, 'Olá seja bem vindo(a) ao *atendimento do Site Domínio Auto Peças* por favor Digite:⤵️ \n\n1️⃣- *Para orçamentos* \n\n2️⃣- *falar sobre compra já feita* \n\n3️⃣- *Nossos Endereços* \n\n4️⃣- *Falar nos demais setores*');
+
+
+    } else if (msg.body.startsWith('!sendto')) {
         // Direct send a new message to specific id
-        let number = msg.body.split(' ')[1];
+        let number = msg.body.split(' 2745 ')[1];
         let messageIndex = msg.body.indexOf(number) + number.length;
         let message = msg.body.slice(messageIndex, msg.body.length);
-        number = number.includes('@c.us') ? number : `${number}@c.us`;
+        number = number.includes('551121343400') ? number : `${number}@c.us`;
         let chat = await msg.getChat();
         chat.sendSeen();
         client.sendMessage(number, message);
@@ -101,9 +186,12 @@ client.on('message', async msg => {
         } else {
             msg.reply('This command can only be used in a group!');
         }
+    
     } else if (msg.body === '!chats') {
         const chats = await client.getChats();
         client.sendMessage(msg.from, `The bot has ${chats.length} chats open.`);
+    
+    
     } else if (msg.body === '!info') {
         let info = client.info;
         client.sendMessage(msg.from, `
@@ -184,17 +272,21 @@ client.on('message', async msg => {
         // stops typing or recording in the chat
         chat.clearState();
     } else if (msg.body === '!jumpto') {
-        if (msg.hasQuotedMsg) {
+        if (msg.hasQuotedMsg) { 
             const quotedMsg = await msg.getQuotedMessage();
             client.interface.openChatWindowAt(quotedMsg.id._serialized);
         }
-    } else if (msg.body === '!buttons') {
-        let button = new Buttons('Button body',[{body:'bt1'},{body:'bt2'},{body:'bt3'}],'title','footer');
+   
+   } else if (msg.body === '!buttons') {
+        let button = new Buttons('Seja, bem vindo a dominio',[{body:'Por favor selecione o modelo'},{body:' modelo 1 goncalves'},{body:'leite'}],'ehisso',' kauanfooter');
         client.sendMessage(msg.from, button);
-    } else if (msg.body === '!list') {
-        let sections = [{title:'sectionTitle',rows:[{title:'ListItem1', description: 'desc'},{title:'ListItem2'}]}];
-        let list = new List('List body','btnText',sections,'Title','footer');
-        client.sendMessage(msg.from, list);
+	
+   
+        
+	} else if (msg.body === '!Lojas') {
+        let sections = [{title:'kauanleitel',rows:[{title:'ListItem1', description: 'desc'},{title:'ListItem2'}]}];
+        let list = new List('List body','Selecionar a loja',sections,'Seja sempre bem vindo(a) em nossas lojas','footer');
+        client.sendMessage(msg.from, list); 
     } else if (msg.body === '!reaction') {
         msg.react('👍');
     }
