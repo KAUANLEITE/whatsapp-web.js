@@ -98,12 +98,16 @@ client.on('message', async msg => {
                 //MODO LOJA 
 
         }
-             else if (msg.body == 'Loja'){
-                client.sendMessage(msg.from,'Seja sempre bem vindo(a) em nossas lojas. \n\n🔁 Estarei direcionando este atendimento para um de nossos vendedores.. \n\n _Você pode digitar qual peça precisa e também colocar em qual loja deseja efetuar a compra_');
+                else if (msg.body =='Loja'){
+            client.sendMessage(msg.from, '*🟢Temos 4 vendedores disponíveis no momento* \n_Clique no link Para falar com o vendedor_ \n\n\n *_DEIVID:_* ⤵️ \nhttps://contate.me/vendedor-deivid')        
+            client.sendMessage(msg.from, '*_WELLINGTON:_* ⤵️ \nhttps://contate.me/vendedor-wellington')    
+            client.sendMessage(msg.from, '*_EVERTON:_* ⤵️ \nhttps://contate.me/vendedor-everton')
            
         }      
-            else if (msg.body == 'loja'){
-                client.sendMessage(msg.from,'Seja sempre bem vindo(a) em nossas lojas. \n\n🔁 Estarei direcionando este atendimento para um de nossos vendedores.. \n\n _Você pode digitar qual peça precisa e também colocar em qual loja deseja efetuar a compra_');  }   
+                else if (msg.body =='loja'){
+            client.sendMessage(msg.from, '*🟢Temos 4 vendedores disponíveis no momento* \n_Clique no link Para falar com o vendedor_ \n\n\n *_DEIVID:_* ⤵️ \nhttps://contate.me/vendedor-deivid')        
+            client.sendMessage(msg.from, '*_WELLINGTON:_* ⤵️ \nhttps://contate.me/vendedor-wellington')    
+            client.sendMessage(msg.from, '*_EVERTON:_* ⤵️ \nhttps://contate.me/vendedor-everton')  }   
              
              
                 // MODO ENDEREÇO 
@@ -113,10 +117,17 @@ client.on('message', async msg => {
                 client.sendMessage(msg.from,'Digite por gentileza em qual setor deseja falar.')}
              
              
-             else if (msg.body =='#Endereço'){
-                client.sendMessage(msg.from,'')}
-                
-                else if (msg.body =='endereço'){
+                                           
+             
+                else if (msg.body =='#Endereço'){
+                client.sendMessage(msg.from, '*🟢Temos 4 vendedores disponíveis no momento* \n_Clique no link Para falar com o vendedor_ \n\n\n *_DEIVID:_* ⤵️ \nhttps://contate.me/vendedor-deivid')        
+                client.sendMessage(msg.from, '*_WELLINGTON:_* ⤵️ \nhttps://contate.me/vendedor-wellington')    
+                client.sendMessage(msg.from, '*_EVERTON:_* ⤵️ \nhttps://contate.me/vendedor-everton')       
+            
+            
+            
+            
+            }else if (msg.body =='endereço'){
                     client.sendMessage(msg.from,'')}
 
 
@@ -132,7 +143,7 @@ client.on('message', async msg => {
         let message = msg.body.slice(messageIndex, msg.body.length);
         number = number.includes('551121343400') ? number : `${number}@c.us`;
         let chat = await msg.getChat();
-        chat.sendSeen();
+        chat.sendSeen();    
         client.sendMessage(number, message);
 
     } else if (msg.body.startsWith('!subject ')) {
@@ -199,6 +210,7 @@ client.on('message', async msg => {
             User name: ${info.pushname}
             My number: ${info.wid.user}
             Platform: ${info.platform}
+           
         `);
     } else if (msg.body === '!mediainfo' && msg.hasMedia) {
         const attachmentData = await msg.downloadMedia();
@@ -250,9 +262,13 @@ client.on('message', async msg => {
     } else if (msg.body === '!pin') {
         const chat = await msg.getChat();
         await chat.pin();
+    
+    //Para arquivar conversa
     } else if (msg.body === '!archive') {
         const chat = await msg.getChat();
         await chat.archive();
+    
+    
     } else if (msg.body === '!mute') {
         const chat = await msg.getChat();
         // mute the chat for 20 seconds
@@ -283,10 +299,12 @@ client.on('message', async msg => {
 	
    
         
-	} else if (msg.body === '!Lojas') {
+	} else if (msg.body === '!list') {
         let sections = [{title:'kauanleitel',rows:[{title:'ListItem1', description: 'desc'},{title:'ListItem2'}]}];
         let list = new List('List body','Selecionar a loja',sections,'Seja sempre bem vindo(a) em nossas lojas','footer');
         client.sendMessage(msg.from, list); 
+    
+    
     } else if (msg.body === '!reaction') {
         msg.react('👍');
     }
