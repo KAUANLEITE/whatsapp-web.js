@@ -104,7 +104,7 @@ client.on('message', async msg => {
             client.sendMessage(msg.from, '*_EVERTON:_* ⤵️ \nhttps://contate.me/vendedor-everton')
            
         }      
-                else if (msg.body =='loja'){
+                else if (msg.body =='loja2'){
             client.sendMessage(msg.from, '*🟢Temos 4 vendedores disponíveis no momento* \n_Clique no link Para falar com o vendedor_ \n\n\n *_DEIVID:_* ⤵️ \nhttps://contate.me/vendedor-deivid')        
             client.sendMessage(msg.from, '*_WELLINGTON:_* ⤵️ \nhttps://contate.me/vendedor-wellington')    
             client.sendMessage(msg.from, '*_EVERTON:_* ⤵️ \nhttps://contate.me/vendedor-everton')  }   
